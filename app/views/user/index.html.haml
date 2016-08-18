@@ -1,4 +1,61 @@
 %p#notice= notice
+
+.row
+  .col-md-3.col-sm-6.col-xs-12
+    .info-box.bg-aqua
+      %span.info-box-icon
+        %i.ion.ion-ios-gear-outline
+      .info-box-content
+        %span.info-box-text CPU Traffic
+        %span.info-box-number
+          90
+          %small %
+        .progress
+          .progress-bar{:style => "width: 70%"}
+        %span.progress-description
+          70% Increase in 30 Days
+      / /.info-box-content
+    / /.info-box
+  / /.col
+  .col-md-3.col-sm-6.col-xs-12
+    .info-box
+      %span.info-box-icon.bg-red
+        %i.fa.fa-book
+      .info-box-content
+        %span.info-box-text Likes
+        %span.info-box-number 41,410
+      / /.info-box-content
+    / /.info-box
+  / /.col
+  / fix for small devices only
+  .clearfix.visible-sm-block
+  .col-md-3.col-sm-6.col-xs-12
+    .info-box.bg-green
+      %span.info-box-icon
+        / %i.ion.ion-ios-cart-outline
+        %i.fa.fa-bomb
+      .info-box-content
+        %span.info-box-text Sales
+        %span.info-box-number 760
+      / /.info-box-content
+    / /.info-box
+  / /.col
+  .col-md-3.col-sm-6.col-xs-12
+    .info-box.bg-yellow
+      %span.info-box-icon
+        %i.ion.ion-ios-people-outline
+      .info-box-content
+        %span.info-box-text New Members
+        %span.info-box-number 2,000
+        .progress
+          .progress-bar{:style => "width: 70%"}
+        %span.progress-description
+          70% Increase in 30 Days
+      / /.info-box-content
+    / /.info-box
+  / /.col
+
+
 = render "user/table", users: @users
 %br
   = link_to 'New User', new_user_path
